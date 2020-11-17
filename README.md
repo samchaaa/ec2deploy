@@ -9,7 +9,7 @@ This script deploys code to EC2 in a single step, as simply as possible. It is w
 
 **What the script does not do is manage your cloud infrastructure.** It is just a one-off script to get your code in the cloud and running, ASAP. In order to terminate or manage your resources, you will need to do that manually or write your own script. For higher level ways to automate your cloud infrastructure, look into [Ansible](https://www.ansible.com/), [Terraform](https://www.terraform.io/), or [pyinfra](https://pyinfra.com/).
 
-The default code in /upload as an example is a bitcoin trading algorithm, written up [in this post](https://samchaaa.medium.com/implement-this-simple-btc-usd-trend-following-algorithm-today-using-coinbase-pro-api-and-python-4c40998307ed).
+The default code in `/upload` is a bitcoin moving average crossover algorithm for Coinbase Pro, written up [in this post](https://samchaaa.medium.com/implement-this-simple-btc-usd-trend-following-algorithm-today-using-coinbase-pro-api-and-python-4c40998307ed).
 
 # Installation
 1. Have [AWS account](http://aws.amazon.com/) set up. This code works with free tier, but you'll still need to input payment information.
@@ -29,7 +29,14 @@ Default output format [None]: json
 `pip install paramiko`
 6. Clone repo
 `git clone https://github.com/samchaaa/ec2deploy.git`
-7. The default code in upload is a bitcoin moving average crossover algorithm for Coinbase Pro [(explanation here)](https://samchaaa.medium.com/implement-this-simple-btc-usd-trend-following-algorithm-today-using-coinbase-pro-api-and-python-4c40998307ed). Replace credentials with your own, or replace the entire folder /upload contents with your own. Specify which .py file you want EC2 to run with `to_execute` (line 35).
+7. Replace default values with your own. Relevant values:
+--a. `ec2deploy.py`
+----1. `region` (line 29) It is important this matches your AWS account, otherwise everything else will break!
+----2. `to_execute` (line 35) By default this is `btc_algo.py`, you can leave this the same or replace with your own script in `/upload`.
+--b. `btc_algo.py` If you do use the default algo in `/upload`, replace with your Coinbase Pro credentials. Credentials must have 'View' and 'Trade' authorized.
+----1. `api_key`
+----2. `passphrase`
+----3. `secret`
 
 # Running the script
 1. Navigate to repo in cmd
