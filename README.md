@@ -2,9 +2,12 @@
 
 # Table of contents
 [About](#about)
+
 [Installation](#installation)
-[Running the script](#running the script)
-[How it works](#how it works)
+
+[Running the script](#running-the-script)
+
+[How it works](#how-it-works)
 
 # About
 This is to help Windows users deploy code to EC2, however it should work with Unix (Mac OS X) as well.
