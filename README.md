@@ -9,6 +9,8 @@ This script deploys code to EC2 in a single step, as simply as possible. It is w
 
 **What the script does not do is manage your cloud infrastructure.** It is just a one-off script to get your code in the cloud and running, ASAP. In order to terminate or manage your resources, you will need to do that manually or write your own script. For higher level ways to automate your cloud infrastructure, look into [Ansible](https://www.ansible.com/), [Terraform](https://www.terraform.io/), or [pyinfra](https://pyinfra.com/).
 
+The default code in /upload as an example is a bitcoin trading algorithm, written up [in this post](https://samchaaa.medium.com/implement-this-simple-btc-usd-trend-following-algorithm-today-using-coinbase-pro-api-and-python-4c40998307ed).
+
 # Installation
 1. Have [AWS account](http://aws.amazon.com/) set up. This code works with free tier, but you'll still need to input payment information.
 2. This free script assumes you've already run EC2 at least once (it uses the default VPC and subnet from previous set up). 
