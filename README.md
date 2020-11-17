@@ -36,7 +36,7 @@ Default output format [None]: json
    1. `region` (line 29) It is important this matches your AWS account, otherwise everything else will break!
    2. `to_execute` (line 35) By default this is `btc_algo.py`, you can leave this the same or replace with your own script in `/upload`.
   
-    `btc_algo.py` If you do use the default algo in `/upload`, replace with your Coinbase Pro credentials. Credentials must have 'View' and 'Trade' authorized.
+   `btc_algo.py` If you do use the default algo in `/upload`, replace with your Coinbase Pro credentials. Credentials must have 'View' and 'Trade' authorized.
    
    1. `api_key` (line 7)
    2. `passphrase` (line 8)
